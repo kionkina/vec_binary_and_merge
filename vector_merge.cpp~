@@ -38,42 +38,6 @@ void merge_sort(vector<int> a){
 }
 
 
-void merge(vector<int> a, vector<int> left, vector<int>right){
-
-  int i=0;
-  int left_ind=0;
-  int right_ind=0;
-  
-  while (left_ind < left.size() && right_ind < right.size()){
-    
-    //going through left and right array values one by one and comparing them
-    if(left[left_ind] <= right[right_ind]){
-      a[i] = left[left_ind];
-      i++;
-      left_ind++;
-    }
-    else {
-      a[i] = right[right_ind];
-      i++;
-      right_ind++;
-    }
-  }
-  //copying rest of the elements
-
-  while(left_ind < left.size()){
-    a[i] = left[left_ind];
-    i++;
-    left_ind++;
-  }
-
-  while(left_ind < right.size()){
-    a[i] = left[right_ind];
-    i++;
-    right_ind++;
-  }
-
-}
-
 
 //vector binary search
 //assumes that the array is already sorted
